@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Secrets::VERSION
   spec.authors       = ["Matteo Abis"]
   spec.email         = ["gmatteo..abis@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = "read and write from a secret yml file"
+  spec.description   = "read and write from a secret yml file"
   spec.homepage      = ""
   spec.license       = "MIT"
 
