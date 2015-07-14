@@ -2,11 +2,14 @@
 
 TODO: Write a gem description
 
+## Credits
+inspired by https://github.com/collin/secrets
+
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'secrets'
+    gem 'secrets', :git => 'https://github.com/Enucatl/secrets.git'
 
 And then execute:
 
@@ -22,7 +25,7 @@ TODO: Write usage instructions here
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/secrets/fork )
+1. Fork it ( https://github.com/Enucatl/secrets/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
