@@ -3,23 +3,19 @@ require "yaml"
 
 module Secrets
 
-  class Secret
+  class Secret < OpenStruct
 
     def initialize path
+      @path = path
       if File.exist?(path)
-        YAML.load_file(path).each do |(key, value)|
-          instance_variable_set "@#{key}", OpenStruct.new(value)
-          define_singleton_method key do
-            instance_variable_get "@#{key}"
-          end
-          define_singleton_method "#{key}=" do |v|
-            instance_variable_set "@#{key}", OpenStruct.new(v)
-            data = YAML.load_file path
-            data[key] = v
-            File.open(path, 'w') { |f| YAML.dump(data, f) }
-          end
-        end
+        super(YAML.load_file(path))
+      else File.open(path, "w") {}
+        super()
       end
+    end
+
+    def save
+      File.open(@path, "w") { |f| YAML.dump(@table, f) }
     end
 
   end
