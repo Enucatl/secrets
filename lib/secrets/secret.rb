@@ -16,6 +16,7 @@ module Secrets
             instance_variable_set "@#{key}", OpenStruct.new(v)
             data = YAML.load_file path
             data[key] = v
+            p "writing #{data} to #{path}"
             File.open(path, 'w') { |f| YAML.dump(data, f) }
           end
         end
