@@ -1,6 +1,6 @@
 require 'secrets'
 
-secrets_file = "config/secrets.yml"
+secrets_file = "secrets.yml"
 
 describe Secrets::Secret do
 
@@ -24,7 +24,14 @@ describe Secrets::Secret do
     expect(secrets.server.address).to eql("100.100.200.200")
   end
 
+  it "writes a new secret" do
+    secrets = Secrets::Secret.new secrets_file
+    secrets.server.ip = "100.100.200.200"
+    address = YAML.load_file(secrets_file)[:server][:ip]
+    expect(address).to eql("100.100.200.200")
+  end
+
   after :all do
-    File.delete "config/secrets.yml"
+    File.delete secrets_file
   end
 end
