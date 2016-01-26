@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'secrets/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "secrets"
+  spec.name          = "yml-secrets"
   spec.version       = Secrets::VERSION
   spec.authors       = ["Matteo Abis"]
   spec.email         = ["gmatteo..abis@gmail.com"]
