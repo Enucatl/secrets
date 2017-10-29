@@ -9,7 +9,7 @@ inspired by https://github.com/collin/secrets
 
 Add this line to your application's Gemfile:
 
-    gem 'secrets', :git => 'https://github.com/Enucatl/secrets.git'
+    gem 'yml-secrets', :git => 'https://github.com/Enucatl/yml-secrets.git'
 
 And then execute:
 
@@ -17,7 +17,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install secrets
+    $ gem install yml-secrets
 
 ## Usage
 
